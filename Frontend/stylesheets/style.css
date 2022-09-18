@@ -1,0 +1,339 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+body {
+  background-color: #FDFDFD;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+#card {
+  background-color: #00008F;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+#profile_picture img {
+  width: 110px;
+  border-radius: 10px;
+}
+
+
+#profile {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+option {
+  padding: 13px 9px 13px 9px;
+  font-size: 17px;
+  font-weight: bold;
+  width: calc(100%/3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#selected {
+  padding-bottom: 9px;
+  border-bottom: 4px solid #FF1721;
+}
+
+.task {
+  padding: 13px 10px 13px 10px;
+}
+
+
+
+.task-desc {
+  font-weight: normal;
+  font-size: 20px;
+  color: #222222;
+}
+
+
+
+.closed {
+  display: none !important;
+}
+
+#collection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.nft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%/3);
+  padding: 10px;
+}
+
+.nft svg {
+  fill: #00008F;
+  width: 75px;
+  margin-bottom: 5px;
+}
+
+.nft-off svg {
+  fill: #C0C0C0;
+}
+
+.nft .nft-text {
+  font-weight: bold;
+  color: #111111;
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+}
+
+.nft-off .nft-text {
+  color: #C0C0C0;
+}
+
+.reward {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+}
+
+.reward-name {
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.reward-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  ;
+}
+
+.reward-price {
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  color: #FF1721;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.reward-price svg {
+  fill: #FF1721;
+  width: 30px;
+  margin-left: 5px;
+}
+
+.reward-left svg {
+  fill: #FF1721;
+  width: 30px;
+}
+
+.reward::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #DEDEDE;
+  width: 100%;
+}
+
+#ex {
+  position: absolute;
+  right: 20;
+  bottom: 20;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00008F;
+}
+
+#ex svg {
+  fill: white;
+  width: 40px;
+}
+
+#wallet_address,
+#qr_address {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  word-wrap: break-word;
+  width: 95%;
+  font-size: 18px;
+
+}
+
+#button_group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+#button_group div {
+  padding: 9px;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button_group div svg {
+  height: 35px;
+  fill: #00008F;
+}
+
+#button_group div:hover {
+  cursor: pointer;
+}
+
+#copy_alert {
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 120;
+  text-align: center;
+  width: 60%;
+  padding: 10px 12px 10px 12px;
+  border-radius: 10px;
+  background-color: #00008F;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#qr_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00008F;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+  height: 100%;
+  padding: 40px 20px 40px 20px;
+}
+
+#qr {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qr_button {
+  background-color: white;
+  color: #00008F;
+  text-align: center;
+  padding: 5px 15px 5px 15px;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 3px;
+}
+
+#qr_address {
+  color: white;
+  padding: 20px;
+}
+
+.social {
+  border-left: 10px solid #EBAA2C;
+}
+
+.mental {
+  border-left: 10px solid #DA41F3;
+}
+
+.physical {
+  border-left: 10px solid #00CD2D;
+}
+
+#rewards_info{
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size:24px;
+  font-weight:bold;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#rewards_info div{
+  padding:10px;
+  color:#FF1721;
+}
+
+#rewards_info div svg{
+  margin-left:5px;
+  width:40px;
+  fill:#FF1721;
+}

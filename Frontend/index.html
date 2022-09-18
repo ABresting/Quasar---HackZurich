@@ -1,0 +1,190 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Quasar</title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="cache-control" content="public">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  </noscript>
+
+</head>
+
+<body class="preload">
+  <div id="copy_alert">Copied!</div>
+  <div id="qr_box">
+    <div id="qr">
+
+    </div>
+    <div id="qr_address">014ab7df614e8805c31e0dba6f0ef38228c8a0bb283d93737bde6aaaab4e0390d7</div>
+    <div id="qr_button" onclick="closeQR()">Close</div>
+  </div>
+  <div id="ex">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+      <path
+        d="M422.6 278.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L434.7 176H64c-17.7 0-32-14.3-32-32s14.3-32 32-32H434.7L377.4 54.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l112 112c12.5 12.5 12.5 32.8 0 45.3l-112 112zm-269.3 224l-112-112c-12.5-12.5-12.5-32.8 0-45.3l112-112c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L141.3 336H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H141.3l57.4 57.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z" />
+    </svg>
+  </div>
+  <main id="card">
+    <h1>Quasar<span style="color:#FF1721">.</span></h1>
+    <div id="profile_picture"><img src="images/user.png"></div>
+    <div id="wallet_address">014ab7df614e8805c31e0dba6f0ef38228c8a0bb283d93737bde6aaaab4e0390d7</div>
+    <div id="button_group">
+      <div onclick="copyAddress('014ab7df614e8805c31e0dba6f0ef38228c8a0bb283d93737bde6aaaab4e0390d7')"><svg
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z" />
+        </svg></div>
+      <div onclick="openQR()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M48 32C21.5 32 0 53.5 0 80v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm80 64v64H64V96h64zM48 288c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48H48zm80 64v64H64V352h64zM256 80v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H304c-26.5 0-48 21.5-48 48zm64 16h64v64H320V96zm32 352v32h32V448H352zm96 0H416v32h32V448zM416 288v32H352V288H256v96 96h64V384h32v32h96V352 320 288H416z" />
+        </svg></div>
+    </div>
+  </main>
+  <nav>
+    <option id="selected" onclick="select('task')">Earn NFTs</option>
+    <option onclick="select('nft')">My Collection</option>
+    <option onclick="select('rewards')">Rewards</option>
+  </nav>
+  <section id="tasks" class="opened">
+    <div class="task social">
+      <h2 class="task-title">Altruism</h2>
+      <h3 class="task-desc">Volunteer for charity</h3>
+    </div>
+
+    <div class="task physical">
+      <h2 class="task-title">Activeness</h2>
+      <h3 class="task-desc">Visit one of our partnered gyms</h3>
+    </div>
+
+    <div class="task mental">
+      <h2 class="task-title">Meditation</h2>
+      <h3 class="task-desc">Take part in a meditation session</h3>
+    </div>
+  </section>
+
+  <section id="collection" class="closed">
+    <div class="nft">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M160.8 96.5c14 17 31 30.9 49.5 42.2c25.9 15.8 53.7 25.9 77.7 31.6V138.8C265.8 108.5 250 71.5 248.6 28c-.4-11.3-7.5-21.5-18.4-24.4c-7.6-2-15.8-.2-21 5.8c-13.3 15.4-32.7 44.6-48.4 87.2zM320 144v30.6l0 0v1.3l0 0 0 32.1c-60.8-5.1-185-43.8-219.3-157.2C97.4 40 87.9 32 76.6 32c-7.9 0-15.3 3.9-18.8 11C46.8 65.9 32 112.1 32 176c0 116.9 80.1 180.5 118.4 202.8L11.8 416.6C6.7 418 2.6 421.8 .9 426.8s-.8 10.6 2.3 14.8C21.7 466.2 77.3 512 160 512c3.6 0 7.2-1.2 10-3.5L245.6 448H320c88.4 0 160-71.6 160-160V128l29.9-44.9c1.3-2 2.1-4.4 2.1-6.8c0-6.8-5.5-12.3-12.3-12.3H400c-44.2 0-80 35.8-80 80zm80 16c-8.8 0-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16s-7.2 16-16 16z" />
+      </svg>
+      <div class="nft-text">Altruism<br>x2</div>
+    </div>
+
+    <div class="nft">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z" />
+      </svg>
+      <div class="nft-text">Mindfullness<br>x1</div>
+    </div>
+
+    <div class="nft">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM144 221.3c0-33.8 27.4-61.3 61.3-61.3c16.2 0 31.8 6.5 43.3 17.9l7.4 7.4 7.4-7.4c11.5-11.5 27.1-17.9 43.3-17.9c33.8 0 61.3 27.4 61.3 61.3c0 16.2-6.5 31.8-17.9 43.3l-82.7 82.7c-6.2 6.2-16.4 6.2-22.6 0l-82.7-82.7c-11.5-11.5-17.9-27.1-17.9-43.3z" />
+      </svg>
+      <div class="nft-text">Healthiness<br>x4</div>
+    </div>
+
+    <div class="nft nft-off">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+        <g><g transform="translate(0.000000,435.000000) scale(0.100000,-0.100000)"><path d="M1817.1,3505.7c-336-32.6-683.6-238.1-1102.1-650.9c-249.6-247.7-389.8-470.4-487.7-777.6C94.8,1660.5,73.7,1326.4,127.5,531.5c69.1-1017.7,182.4-1685.9,422.4-2507.7C859-3036.1,1124-3512.3,1748-4136.3c284.2-284.2,579.9-516.5,781.5-614.4c161.3-80.6,243.8-80.6,554.9-1.9c343.7,88.3,378.3,90.3,806.4,34.6c631.7-78.7,867.9-94.1,1284.5-82.6c409,11.5,570.3,36.5,885.2,142.1C6748-4432,7337.4-3944.3,7829-3193.5c155.5,236.2,355.2,626,455.1,885.2l71,182.4l140.2,44.2c506.9,161.3,908.2,466.6,1155.9,877.5c190.1,316.8,278.4,777.6,240,1255.7c-84.5,1046.5-577.9,1749.2-1372.9,1960.4c-195.9,51.8-622.1,69.1-887.1,38.4c-633.6-78.7-1104.1-288-1474.6-662.4c-313-313-480-664.4-503.1-1048.4L5642,157.1l-299.6-1.9c-330.2-1.9-547.2-34.6-775.7-117.1c-299.5-107.5-512.7-240-708.5-439.7c-224.6-230.4-353.3-443.6-483.9-804.5c-11.5-30.7-26.9-15.4-84.5,96c-163.2,311.1-382.1,595.2-725.8,950.5c-230.4,238.1-347.5,382.1-462.7,566.4c-92.2,147.9-247.7,464.7-322.6,662.4c-78.7,207.4-71,241.9,44.2,176.7c213.1-119.1,624-80.7,762.3,73c21.1,23,78.7,63.4,126.7,86.4c82.6,42.2,209.3,163.2,209.3,199.7c0,7.7,36.5,38.4,82.6,67.2c92.2,59.5,169,159.4,203.5,265c13.4,38.4,36.5,80.6,51.8,94.1c44.2,36.5,65.3,86.4,84.5,199.7c30.7,184.3-53.8,420.5-211.2,593.3c-97.9,105.6-545.3,453.1-723.9,560.7C2231.9,3490.4,2053.3,3526.8,1817.1,3505.7z M2172.4,3066c117.1-59.5,618.3-445.5,687.4-530c30.7-36.5,67.2-101.8,80.6-142.1c23-73,23-76.8-36.5-134.4c-42.2-44.2-59.5-78.7-59.5-124.8c0-94.1-17.3-124.8-71-124.8c-26.9,0-78.7-17.3-113.3-40.3c-49.9-30.7-67.2-57.6-76.8-115.2c-13.4-82.6-49.9-113.3-136.3-113.3c-63.4-1.9-121-46.1-153.6-119.1c-21.1-49.9-32.6-53.8-124.8-53.8c-115.2,0-138.2,11.5-157.4,69.1c-17.3,57.6-90.2,119-145.9,122.9c-90.2,7.7-113.3,0-176.7-55.7c-34.6-30.7-109.4-74.9-165.1-97.9c-169-73-245.8-201.6-215.1-368.7c23-119,169-489.6,288-723.9c195.9-391.7,334.1-585.6,652.8-914c470.4-485.8,662.4-768.1,892.8-1315.3c124.8-297.6,180.5-364.8,293.8-364.8c136.3,1.9,167.1,57.6,234.3,412.8c49.9,270.7,99.8,420.5,203.5,626c197.8,386,499.2,620.2,962,752.7c136.3,38.4,192,42.2,639.4,42.2c531.9,0,553,3.8,595.2,105.6c21.1,49.9,19.2,84.5-9.6,213.1C5966.5,508.4,6210.3,998.1,6675,1313c301.5,203.5,643.2,311.1,1104.1,353.3c541.5,46.1,908.2-63.4,1211.6-366.7C9307.5,984.6,9476.4,525.7,9501.4-83c19.2-493.5-76.8-812.2-337.9-1130.9c-192-232.3-610.6-464.7-988.9-549.2c-88.3-19.2-149.8-105.6-222.7-309.1c-36.5-105.6-130.6-320.7-211.2-478.1c-288-577.9-654.7-1034.9-1092.5-1365.2c-182.4-138.3-553-328.3-760.4-391.7c-455.1-138.3-963.9-144-1897.1-26.9c-483.9,61.4-643.2,55.7-986.9-30.7l-251.5-63.4l-132.5,76.8c-274.6,165.1-731.6,595.2-983.1,925.5c-265,347.5-385.9,583.7-551.1,1067.6C761.1-1404,609.4-657.1,530.7,406.7c-51.8,687.4-40.3,1150.1,38.4,1463.1c42.2,167,186.3,441.6,301.5,576c257.3,303.4,691.2,616.3,917.8,664.4C1894,3133.2,2086,3110.2,2172.4,3066z"/></g></g>
+        </svg>
+      <div class="nft-text">Activeness</div>
+    </div>
+  </section>
+  <section id="rewards" class="closed">
+    <div id="rewards_info">
+    You have<br>
+    <div style="display:flex;flex-direction: row;align-items: center;">
+    30 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+      <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+      <path
+        d="M543.9 251.4c0-1.1 .1-2.2 .1-3.4c0-48.6-39.4-88-88-88l-40 0H320l-16 0 0 0v16 72c0 22.1-17.9 40-40 40s-40-17.9-40-40V128h.4c4-36 34.5-64 71.6-64H408c2.8 0 5.6 .2 8.3 .5l40.1-40.1c21.9-21.9 57.3-21.9 79.2 0l78.1 78.1c21.9 21.9 21.9 57.3 0 79.2l-69.7 69.7zM192 128V248c0 39.8 32.2 72 72 72s72-32.2 72-72V192h80l40 0c30.9 0 56 25.1 56 56c0 27.2-19.4 49.9-45.2 55c8.2 8.6 13.2 20.2 13.2 33c0 26.5-21.5 48-48 48h-2.7c1.8 5 2.7 10.4 2.7 16c0 26.5-21.5 48-48 48H224c-.9 0-1.8 0-2.7-.1l-37.7 37.7c-21.9 21.9-57.3 21.9-79.2 0L26.3 407.6c-21.9-21.9-21.9-57.3 0-79.2L96 258.7V224c0-53 43-96 96-96z" />
+    </svg></div>
+    impact tokens</div>
+    <div id="rewards_list">
+      <div class="reward">
+        <div class="reward-left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 96c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z" />
+          </svg>
+          <div class="reward-name">10% discount at Cool Shop</div>
+        </div>
+        <div class="reward-price">
+          15
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M543.9 251.4c0-1.1 .1-2.2 .1-3.4c0-48.6-39.4-88-88-88l-40 0H320l-16 0 0 0v16 72c0 22.1-17.9 40-40 40s-40-17.9-40-40V128h.4c4-36 34.5-64 71.6-64H408c2.8 0 5.6 .2 8.3 .5l40.1-40.1c21.9-21.9 57.3-21.9 79.2 0l78.1 78.1c21.9 21.9 21.9 57.3 0 79.2l-69.7 69.7zM192 128V248c0 39.8 32.2 72 72 72s72-32.2 72-72V192h80l40 0c30.9 0 56 25.1 56 56c0 27.2-19.4 49.9-45.2 55c8.2 8.6 13.2 20.2 13.2 33c0 26.5-21.5 48-48 48h-2.7c1.8 5 2.7 10.4 2.7 16c0 26.5-21.5 48-48 48H224c-.9 0-1.8 0-2.7-.1l-37.7 37.7c-21.9 21.9-57.3 21.9-79.2 0L26.3 407.6c-21.9-21.9-21.9-57.3 0-79.2L96 258.7V224c0-53 43-96 96-96z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="reward">
+        <div class="reward-left">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M407 47c9.4-9.4 24.6-9.4 33.9 0l17.2 17.2c1.9-.1 3.9-.2 5.8-.2h32c11.2 0 21.9 2.3 31.6 6.5L543 55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L564 101.9c7.6 12.2 12 26.7 12 42.1c0 10.2 7.4 18.8 16.7 23c27.9 12.5 47.3 40.5 47.3 73c0 26.2-12.6 49.4-32 64v32c0 8.8-7.2 16-16 16H560c-8.8 0-16-7.2-16-16V320H480v16c0 8.8-7.2 16-16 16H432c-8.8 0-16-7.2-16-16V318.4c-11.8-2.4-22.7-7.4-32-14.4c-1.5-1.1-2.9-2.3-4.3-3.5c-17-14.7-27.7-36.4-27.7-60.5c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 44.7 26.2 83.2 64 101.2V352c0 17.7 14.3 32 32 32h32v64c0 17.7-14.3 32-32 32H352c-17.7 0-32-14.3-32-32V372c-19.8 7.7-41.4 12-64 12s-44.2-4.3-64-12v76c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V329.1L45.9 369.7c-5.4 12.1-19.6 17.6-31.7 12.2S-3.3 362.4 2.1 350.3L24 300.9c5.3-11.9 8-24.7 8-37.7C32 155.7 117.2 68 223.8 64.1l.2-.1h7.2H256h32c41.7 0 83.4 12.1 117.2 25.7c1.7-1.8 3.5-3.6 5.3-5.2L407 81c-9.4-9.4-9.4-24.6 0-33.9zm73 185c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24zm88 24c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zM480 144c0-8.8-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16s16-7.2 16-16zm48 16c8.8 0 16-7.2 16-16s-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16z" />
+          </svg>
+          <div class="reward-name">15% discount for ZOO ticket</div>
+        </div>
+        <div class="reward-price">
+          20
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M543.9 251.4c0-1.1 .1-2.2 .1-3.4c0-48.6-39.4-88-88-88l-40 0H320l-16 0 0 0v16 72c0 22.1-17.9 40-40 40s-40-17.9-40-40V128h.4c4-36 34.5-64 71.6-64H408c2.8 0 5.6 .2 8.3 .5l40.1-40.1c21.9-21.9 57.3-21.9 79.2 0l78.1 78.1c21.9 21.9 21.9 57.3 0 79.2l-69.7 69.7zM192 128V248c0 39.8 32.2 72 72 72s72-32.2 72-72V192h80l40 0c30.9 0 56 25.1 56 56c0 27.2-19.4 49.9-45.2 55c8.2 8.6 13.2 20.2 13.2 33c0 26.5-21.5 48-48 48h-2.7c1.8 5 2.7 10.4 2.7 16c0 26.5-21.5 48-48 48H224c-.9 0-1.8 0-2.7-.1l-37.7 37.7c-21.9 21.9-57.3 21.9-79.2 0L26.3 407.6c-21.9-21.9-21.9-57.3 0-79.2L96 258.7V224c0-53 43-96 96-96z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="reward">
+        <div class="reward-left">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M96 64c0-17.7 14.3-32 32-32H448h64c70.7 0 128 57.3 128 128s-57.3 128-128 128H480c0 53-43 96-96 96H192c-53 0-96-43-96-96V64zM480 224h32c35.3 0 64-28.7 64-64s-28.7-64-64-64H480V224zM32 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+          </svg>
+          <div class="reward-name">Free espresso at Moonbills</div>
+        </div>
+        <div class="reward-price">
+          35
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M543.9 251.4c0-1.1 .1-2.2 .1-3.4c0-48.6-39.4-88-88-88l-40 0H320l-16 0 0 0v16 72c0 22.1-17.9 40-40 40s-40-17.9-40-40V128h.4c4-36 34.5-64 71.6-64H408c2.8 0 5.6 .2 8.3 .5l40.1-40.1c21.9-21.9 57.3-21.9 79.2 0l78.1 78.1c21.9 21.9 21.9 57.3 0 79.2l-69.7 69.7zM192 128V248c0 39.8 32.2 72 72 72s72-32.2 72-72V192h80l40 0c30.9 0 56 25.1 56 56c0 27.2-19.4 49.9-45.2 55c8.2 8.6 13.2 20.2 13.2 33c0 26.5-21.5 48-48 48h-2.7c1.8 5 2.7 10.4 2.7 16c0 26.5-21.5 48-48 48H224c-.9 0-1.8 0-2.7-.1l-37.7 37.7c-21.9 21.9-57.3 21.9-79.2 0L26.3 407.6c-21.9-21.9-21.9-57.3 0-79.2L96 258.7V224c0-53 43-96 96-96z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="javascripts/qrcode.min.js"></script>
+  <script type="text/javascript">
+    new QRCode(document.getElementById("qr"), "014ab7df614e8805c31e0dba6f0ef38228c8a0bb283d93737bde6aaaab4e0390d7");
+  </script>
+  <script src="javascripts/preload.js"></script>
+  <script src="javascripts/logic.js"></script>
+</body>
+
+</html>
